@@ -113,5 +113,55 @@
   </div>
   <audio id="birthdayAudio" loop preload="none"><!-- Add your licensed music file here, e.g. src="music.mp3" --></audio>
   <script src="script.js"></script>
+  
+<audio id="birthdayMusic" loop preload="auto">
+  <source src="./birthday-music.mp3" type="audio/mpeg">
+</audio>
+
+<button id="musicToggle" class="music-toggle" aria-label="Toggle music">
+  ♫ Play music
+</button>
+
+<style>
+  .music-toggle {
+    position: fixed;
+    right: 16px;
+    bottom: 18px;
+    z-index: 20;
+    padding: 12px 16px;
+    border: 1px solid #d9b879;
+    border-radius: 30px;
+    background: #321420;
+    color: #f9eee8;
+    cursor: pointer;
+  }
+</style>
+
+<script>
+  const music = document.getElementById("birthdayMusic");
+  const toggle = document.getElementById("musicToggle");
+
+  async function playMusic() {
+    try {
+      await music.play();
+      toggle.textContent = "♫ Pause music";
+    } catch (error) {
+      toggle.textContent = "♫ Tap to play";
+    }
+  }
+
+  toggle.addEventListener("click", async () => {
+    if (music.paused) {
+      await playMusic();
+    } else {
+      music.pause();
+      toggle.textContent = "♫ Play music";
+    }
+  });
+
+  document.getElementById("openGift").addEventListener("click", playMusic);
+</script>
+</body>
+  
 </body>
 </html>
