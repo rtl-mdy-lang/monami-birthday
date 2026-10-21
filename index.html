@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#160a12">
+  <meta name="description" content="A little rose-garden birthday surprise for Monami.">
+  <title>For Monami — Chapter 19 🌹</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=DM+Sans:wght@300;400;500;600&family=Great+Vibes&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="ambient ambient-one"></div><div class="ambient ambient-two"></div>
+  <canvas id="petals" aria-hidden="true"></canvas>
+  <div class="grain" aria-hidden="true"></div>
+
+  <main>
+    <section class="intro screen" id="intro" aria-labelledby="intro-title">
+      <div class="intro-orbit orbit-one"></div><div class="intro-orbit orbit-two"></div>
+      <div class="intro-content">
+        <p class="eyebrow"><span class="tiny-star">✦</span> A LITTLE SOMETHING FOR YOU <span class="tiny-star">✦</span></p>
+        <div class="gift" aria-hidden="true"><div class="gift-lid"></div><div class="gift-box"></div><div class="gift-ribbon"></div><div class="gift-bow">∞</div><span class="gift-spark spark-a">✧</span><span class="gift-spark spark-b">✦</span><span class="gift-spark spark-c">✧</span></div>
+        <h1 id="intro-title">Hey, <em>Monami.</em></h1>
+        <p class="intro-copy">A tiny surprise, wrapped with a little stardust<br>and a whole garden of good wishes.</p>
+        <button class="button button-gold" id="openGift">Open your surprise <span>↗</span></button>
+        <p class="soft-note">made just for your special day</p>
+      </div>
+      <div class="bottom-mark">OCTOBER 21 · A NEW CHAPTER</div>
+    </section>
+
+    <div id="experience" class="hidden">
+      <nav class="topbar"><a class="brand" href="#hero">M<span>✦</span></a><span class="nav-note">A birthday garden for Monami</span><button class="sound-toggle" id="musicToggle" aria-label="Toggle background music" title="Toggle music">♫ <span id="musicLabel">Music off</span></button></nav>
+      <section class="hero section-wrap" id="hero">
+        <div class="hero-copy reveal">
+          <p class="eyebrow"><span class="line"></span> OCTOBER 21, 2026 <span class="line"></span></p>
+          <h2>Happy Birthday,<br><em>Monami.</em></h2>
+          <p class="hero-subtitle">Chapter <span class="gold">19</span> begins tonight.</p>
+          <p class="hero-description">May this new chapter bring you little miracles, brave dreams, unexpected joy, and a thousand reasons to smile.</p>
+          <a class="button button-outline" href="#letter">A little letter for you <span>↓</span></a>
+          <div class="signature">with warm wishes <span>♡</span></div>
+        </div>
+        <div class="hero-art reveal" aria-label="Decorative rose garden illustration">
+          <div class="moon"></div><div class="moon-halo"></div>
+          <div class="arch arch-back"></div><div class="arch arch-front"></div>
+          <div class="garden-stars"><i>✦</i><i>✧</i><i>·</i><i>✦</i><i>✧</i><i>·</i></div>
+          <div class="rose rose-one"><b></b><i></i><span></span></div>
+          <div class="rose rose-two"><b></b><i></i><span></span></div>
+          <div class="rose rose-three"><b></b><i></i><span></span></div>
+          <div class="rose rose-four"><b></b><i></i><span></span></div>
+          <div class="rose rose-five"><b></b><i></i><span></span></div>
+          <div class="rose rose-six"><b></b><i></i><span></span></div>
+          <div class="hero-number">19</div>
+          <div class="art-caption">a beautiful age · a beautiful beginning</div>
+        </div>
+        <div class="scroll-cue"><span></span> KEEP EXPLORING</div>
+      </section>
+
+      <section class="wish-section section-wrap">
+        <div class="section-heading reveal"><p class="eyebrow">A WISH FOR YOUR YEAR</p><h3>May life be <em>kind</em> to you.</h3><p>And may the little things become the memories you treasure most.</p></div>
+        <div class="wish-grid">
+          <article class="wish-card reveal"><span class="card-icon">✧</span><h4>Dream boldly</h4><p>May you find the courage to follow the dreams that make your heart feel alive.</p></article>
+          <article class="wish-card reveal"><span class="card-icon">☾</span><h4>Find your magic</h4><p>May ordinary days surprise you with laughter, wonder, and beautiful little moments.</p></article>
+          <article class="wish-card reveal"><span class="card-icon">♡</span><h4>Keep shining</h4><p>May you always remember that your own kind of light is more than enough.</p></article>
+        </div>
+      </section>
+
+      <section class="letter-section section-wrap" id="letter">
+        <div class="letter-intro reveal"><p class="eyebrow">SEALED WITH A WISH</p><h3>A little letter,<br><em>just for you.</em></h3><p>No grand speeches. Just a few sincere words for your day.</p></div>
+        <div class="envelope-area reveal">
+          <button class="envelope" id="openLetter" aria-label="Open the birthday letter">
+            <span class="envelope-paper"></span><span class="envelope-flap"></span><span class="wax-seal">M<span>♡</span></span>
+          </button>
+          <p class="envelope-hint" id="letterHint">Tap the seal to open your letter</p>
+        </div>
+        <article class="letter-paper" id="letterPaper" aria-live="polite">
+          <div class="letter-top">A NOTE FOR MONAMI <span>✦</span></div>
+          <p class="letter-dear">Dear Monami,</p>
+          <div class="letter-body" id="letterBody"></div>
+          <p class="letter-signoff">Happy 19th Birthday <span>♡</span></p>
+          <p class="letter-from">— someone wishing you the loveliest year</p>
+        </article>
+      </section>
+
+      <section class="cake-section section-wrap">
+        <div class="section-heading reveal"><p class="eyebrow">MAKE A LITTLE WISH</p><h3>One candle, <em>infinite possibilities.</em></h3><p>Take a breath, close your eyes, and wish for something wonderful.</p></div>
+        <div class="cake-stage reveal">
+          <div class="cake-glow"></div><div class="cake">
+            <div class="candle candle-a"><span class="flame"></span></div><div class="candle candle-b"><span class="flame"></span></div><div class="candle candle-c"><span class="flame"></span></div>
+            <div class="cake-top"></div><div class="cake-middle"></div><div class="cake-bottom"></div><div class="cake-plate"></div>
+          </div>
+          <button class="button button-gold" id="wishButton">Make a birthday wish ✨</button>
+          <p class="wish-result" id="wishResult" aria-live="polite"></p>
+        </div>
+      </section>
+
+      <section class="final-section section-wrap">
+        <div class="final-frame reveal">
+          <div class="final-sparkle">✦</div><p class="eyebrow">AND BEFORE YOU GO...</p>
+          <h3>One last little<br><em>surprise.</em></h3>
+          <p>Because turning 19 deserves a little extra magic.</p>
+          <button class="button button-gold" id="lastSurprise">Open the final surprise <span>♡</span></button>
+        </div>
+      </section>
+      <footer><div class="footer-rose">✿</div><p>For Monami, on her 19th birthday.</p><span>May your next chapter be beautiful. 🌹</span><small>MADE WITH CARE · 21 OCTOBER 2026</small></footer>
+    </div>
+  </main>
+
+  <div class="modal hidden" id="finalModal" role="dialog" aria-modal="true" aria-labelledby="finalTitle">
+    <div class="modal-stars" aria-hidden="true"></div><button class="modal-close" id="closeModal" aria-label="Close surprise">×</button>
+    <div class="modal-content"><div class="modal-rose">🌹</div><p class="eyebrow">WELCOME TO</p><div class="chapter-number">19</div><h2 id="finalTitle">Chapter Nineteen</h2><p class="modal-message">May your dreams grow bigger, your smile grow brighter, and your heart find a thousand beautiful reasons to be happy.</p><p class="modal-last">Happy Birthday, Monami. Keep being wonderfully you. <span>♡</span></p><div class="confetti-word">✦ ✧ ✦ ✧ ✦</div></div>
+  </div>
+  <audio id="birthdayAudio" loop preload="none"><!-- Add your licensed music file here, e.g. src="music.mp3" --></audio>
+  <script src="script.js"></script>
+</body>
+</html>
